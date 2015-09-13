@@ -1,0 +1,23 @@
+// begin of how-works section
+
+.how-works.container
+  section
+    h2.how-works__title How Urlaubsglück works?
+
+    -var works = [{title: 'Sed leo enim, condimentum', text: 'Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.'}, {title: 'Morbi velit risus', text: 'Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.'}, {title: 'Sed leo enim, condimentum', text: 'Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.'}]
+    each work, index in works
+
+      div(class='how-works__step how-works__step-' + (index + 1))
+
+        section
+          .how-works__step-controls
+            button.how-works__step-controls--left
+            button.how-works__step-controls--right
+          h3.how-works__step-text= 'step ' + (index + 1)
+
+          //- @todo: implement sub steps
+          article
+            h4.how-works__step-title= work.title
+            p.how-works__text= work.text
+
+// end of how-works section

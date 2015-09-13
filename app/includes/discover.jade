@@ -1,0 +1,12 @@
+// begin of discover section
+.discover
+  section
+    .discover__title Discover holiday activity ideas
+
+    -var discoverItems = ['Sport and Activity', 'Wellnes and Health', 'Extreme Sports and Expeditions', 'Games', 'Culture and Education', 'Relaxation', 'Travelling']
+    for discoverItem in discoverItems
+      .discover__item
+        img.discover__item-img
+        span.discover__item-title= discoverItem
+
+// end of discover section

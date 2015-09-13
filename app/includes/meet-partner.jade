@@ -1,0 +1,17 @@
+// begin of meet-partner section
+
+.meet-partner.container
+  section
+    h2.meet-partner__title Meet a partner for your best holiday
+
+    -var partners = [{name: 'Bradley Hunter', text: 'Based in Chicago. I love playing tennis and loud music.'}, {name: 'Heather Walker', text: 'I\'m a happy person that loves cats and climbing on mountains.'}, {name: 'Lucas Marsha', text: 'I get my inspiration from nature and objects around me. I have a passion to colours, typography and skateboards.'}, {name: 'Laura Matser', text: 'Based in Chicago. I love playing tennis and loud music.'}]
+    each partner, index in partners
+      .partner
+        article
+          img.partner__img(class='partner__img--' + (index + 1) src='images/partners/' + partner.name.toLowerCase().replace(' ', '-') + '-photo.png')
+          h3.partner__title= partner.name
+          p.partner__text= partner.text
+
+    a.meet-partner__other-partners(href='#') See other partners
+
+// end of meet-partner section

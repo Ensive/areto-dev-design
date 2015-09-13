@@ -107,6 +107,7 @@ gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 
 gulp.task('serve', ['views', 'styles', 'scripts', 'fonts'], () => {
   browserSync({
+    browser: 'safari',
     notify: false,
     port: 9000,
     server: {
