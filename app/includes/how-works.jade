@@ -1,18 +1,18 @@
 // begin of how-works section
 
-.how-works.container
+.how-works.container.cf
   section
     h2.how-works__title.section-title How Urlaubsglück works?
 
-    -var works = [{title: 'Sed leo enim, condimentum', text: 'Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.'}, {title: 'Morbi velit risus', text: 'Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.'}, {title: 'Sed leo enim, condimentum', text: 'Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.'}]
+    -var works = [{title: 'Sed leo enim, condimentum', text: 'Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.'}, {title: 'Morbi velit risus', text: 'Nulla venenatis tempor dui in molestie. Nulla quis dictum purus, sit amet porttitor est.'}, {title: 'Sed leo enim, condimentum', text: 'Quisque libero libero, dictum non turpis in, luctus semper lorem. Donec rhoncus a leo sit amet facilisis.'}]
     each work, index in works
 
-      div(class='how-works__step how-works__step-' + (index + 1))
+      div(class='how-works__step how-works__step-' + (index + 1) + (index === 2 ? ' last' : ''))
 
         section
-          .how-works__step-controls
-            button.how-works__step-controls--left
-            button.how-works__step-controls--right
+          .how-works__step-controls.cf
+            button.how-works__arrow.how-works__arrow--left
+            button.how-works__arrow.how-works__arrow--right
           h3.how-works__step-text= 'step ' + (index + 1)
 
           //- @todo: implement sub steps

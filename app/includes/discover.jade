@@ -1,13 +1,13 @@
 // begin of discover section
 .discover
   section
-    .discover__title.section-title Discover holiday activity ideas
+    h2.discover__title.section-title Discover holiday activity ideas
 
-    -var discoverItems = ['Sport and Activity', 'Wellnes and Health', 'Extreme Sports and Expeditions', 'Games', 'Culture and Education', 'Relaxation', 'Travelling']
+    -var discoverItems = [{title: 'Sport and Activity', type: 'block-1'}, {title: 'Wellnes and Health', type: 'block-1'}, {title: 'Extreme Sports and Expeditions', type: 'block-1'}, {title: 'Games', type: 'block-1'}, {title: 'Culture and Education', type: 'block-2'}, {title: 'Relaxation', type: 'block-2'}, {title: 'Travelling', type: 'block-1'}]
     for discoverItem in discoverItems
-      .discover__item
+      div(class='discover__item ' + discoverItem.type)
         img.discover__item-img
-        span.discover__item-title= discoverItem
+        span.discover__item-title= discoverItem.title
 
     .discover__title.discover__title--bottom.section-title Discover holiday activity ideas
     .discover__subtitle Hi! What are your holiday interests?

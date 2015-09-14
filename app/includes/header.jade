@@ -1,14 +1,17 @@
-.header-wrapper
+.header-wrapper.cf
 
-  header.header
-    h2.header__site-name(role='banner') Urlaubsglück
+  header.header.container.cf
+    h2.header__site-name(role='banner')
+      a.header__site-name-link(href='#') Urlaubsglück
     .header__actions(role='menu')
       a.header__button.header__button--login(href='#') Log in
-      a.header__button.header__button--register.nice-button.nice-button--white(href='#') Sign up
+      a.header__button.header__button--register(href='#') Sign up
 
   //- call to action
-  h3.call-to-action-title
-    |share your
-    |holiday dreams
-  h4.call-to-action-text And find the perfect partner to fullfill it
-  button.call-to-action-button.nice-button.nice-button--red Find your holiday partner
+  .call-to-action.container
+    h3.call-to-action__title
+      |share your
+      br
+      |holiday dreams
+    h4.call-to-action__text And find the perfect partner to fullfill it
+    button.call-to-action__button.nice-button.nice-button--red Find your holiday partner

@@ -1,0 +1,43 @@
+// container
+.meet-partner
+  text-align: center
+  &__title
+    margin-bottom: 33px
+  &__button
+    margin-top: 37px
+    width: 192px
+    &:hover
+      background-color: #ff4e50
+      color: #fff
+
+// partner item
+.partner
+  width: 25%
+  padding: 0 15px
+  display: block
+  float: left
+  text-decoration: none
+
+  &__img
+    border-radius: 100%
+    transition: box-shadow .2s linear
+    border: 2px solid transparent
+
+  &__title
+    margin: 18px 0 0 0
+    font-family: $montserrat-bold
+    font-size: 1.4em
+    font-size: 1.4rem
+    color: #333
+
+  &__text
+    margin: 15px 0 0 0
+    font-family: $roboto-light
+    font-size: 1.4em
+    font-size: 1.4rem
+    line-height: 1.2
+    color: #666
+
+  &:hover
+    .partner__img
+      box-shadow: 0 0 15px rgba(0, 0, 0, .8)
