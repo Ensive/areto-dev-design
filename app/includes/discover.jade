@@ -1,18 +1,18 @@
 // begin of discover section
-.discover
+.discover.container
   section
     h2.discover__title.section-title Discover holiday activity ideas
 
     -var discoverItems = [{title: 'Sport and Activity', type: 'block-1'}, {title: 'Wellnes and Health', type: 'block-1'}, {title: 'Extreme Sports and Expeditions', type: 'block-1'}, {title: 'Games', type: 'block-1'}, {title: 'Culture and Education', type: 'block-2'}, {title: 'Relaxation', type: 'block-2'}, {title: 'Travelling', type: 'block-1'}]
-    for discoverItem in discoverItems
-      div(class='discover__item ' + discoverItem.type)
-        img.discover__item-img
+    each discoverItem, index in discoverItems
+      div(class='discover__item ' + discoverItem.type + (index === 2 || index === 4 || index === 6 ? ' last' : ''))
+        img.discover__item-img(src='images/discover/' + discoverItem.title.toLowerCase().replace(/ /gim, '-') + '.jpg')
         span.discover__item-title= discoverItem.title
 
     .discover__title.discover__title--bottom.section-title Discover holiday activity ideas
     .discover__subtitle Hi! What are your holiday interests?
 
-    form.discover__form(action='#' method='post')
+    form.discover__form.cf(action='#' method='post')
       input.discover__input(placeholder='Enter your interests' type='text' name='interests')
       button.discover__button.nice-button.nice-button--red(type='submit') Search partners
 
