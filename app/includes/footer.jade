@@ -1,0 +1,19 @@
+.footer-wrapper
+
+  footer.footer.container
+    section
+
+      h2.footer__title urlaubsglück
+
+      .footer__menu
+        h4.footer__menu-title Company
+        nav.footer__nav(role='navigation')
+        -var items = ['About', 'Contacts', 'Press', 'Blog']
+        for item in items
+          a.footer__nav-link= item
+
+      .footer__menu
+        h4.footer__menu-title Partners
+
+      .footer__logo
+        img.footer__logo-img

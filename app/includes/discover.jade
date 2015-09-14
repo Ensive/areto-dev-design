@@ -1,12 +1,19 @@
 // begin of discover section
 .discover
   section
-    .discover__title Discover holiday activity ideas
+    .discover__title.section-title Discover holiday activity ideas
 
     -var discoverItems = ['Sport and Activity', 'Wellnes and Health', 'Extreme Sports and Expeditions', 'Games', 'Culture and Education', 'Relaxation', 'Travelling']
     for discoverItem in discoverItems
       .discover__item
         img.discover__item-img
         span.discover__item-title= discoverItem
+
+    .discover__title.discover__title--bottom.section-title Discover holiday activity ideas
+    .discover__subtitle Hi! What are your holiday interests?
+
+    form.discover__form(action='#' method='post')
+      input.discover__input(placeholder='Enter your interests' type='text' name='interests')
+      button.discover__button.nice-button.nice-button--red(type='submit') Search partners
 
 // end of discover section
