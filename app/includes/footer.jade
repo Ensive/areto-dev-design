@@ -1,4 +1,4 @@
-.footer-wrapper
+.footer-wrapper.cf
 
   footer.footer.container
     section
@@ -6,15 +6,24 @@
       h2.footer__title urlaubsglück
 
       .footer__menu
+
         h4.footer__menu-title Company
+
         nav.footer__nav(role='navigation')
           h5.hidden Navigation
-        -var items = ['About', 'Contacts', 'Press', 'Blog']
-        for item in items
-          a.footer__nav-link= item
+          -var items = ['About', 'Contacts', 'Press', 'Blog']
+          for item in items
+            div
+              a(class='footer__nav-link' href='#')= item
 
       .footer__menu
         h4.footer__menu-title Partners
+        -var partners = ['Partner number #1', 'Partner number #2', 'Partner number #3', 'Partner number #4']
+        for partner in partners
+          a(class='footer__nav-link' href='#')= partner
+
 
       .footer__logo
-        img.footer__logo-img
+        span.footer__logo-text Designed by
+        a(href='#' class='footer__logo-link')
+          img.footer__logo-img(src='images/areto-logo.png')

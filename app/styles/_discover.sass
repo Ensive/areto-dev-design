@@ -3,13 +3,66 @@
     margin-bottom: 39px
 
   &__item
+    position: relative
     display: block
     float: left
     width: 31.91489361702128%
-    margin: 0 2.12765957446809% 0 0
-    text-align: center
-
+    margin: 0 2.12765957446809% 2.12765957446809% 0
+    text-decoration: none
+    border-radius: 4px
+    overflow: hidden
     &.block-2
       width: 65.95744680851064%
     &.last
       margin: 0
+
+    &-title
+      position: absolute
+      top: 46.5%
+      left: 0
+      display: block
+      width: 100%
+      padding: 0 10px
+      font-family: $montserrat-bold
+      font-size: 2.2em
+      font-size: 2.2rem
+      text-align: center
+      color: #fff
+
+  &__subtitle
+    margin-bottom: 41px
+    font-family: $roboto-light
+    font-size: 1.8em
+    font-size: 1.8rem
+    text-align: center
+    color: #333
+
+  // form
+  &__form
+    width: 460px
+    margin: 0 auto
+    padding: 0 25px 0 24px
+
+  &__input
+    width: 240px
+    height: 40px
+    float: left
+    padding: 0 0 0 15px
+    margin: 0 10px 0 0
+    font-family: $roboto-light
+    font-size: 1.4em
+    font-size: 1.4rem
+    line-height: 40px
+    color: #999
+    background-color: #fff
+    border: 1px solid #ccc
+    border-radius: 4px
+    box-shadow: 0 1px 0 #eee
+
+  &__button
+    width: 160px
+    line-height: 36px
+    float: left
+    &:hover
+      color: #ff4e50
+      background: none
