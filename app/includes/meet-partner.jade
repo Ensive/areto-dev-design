@@ -9,8 +9,8 @@
       each partner, index in partners
         a.partner(href='#')
           article
-            figure
-              img(class='partner__img partner__img--' + (index + 1) src='images/partners/' + partner.name.toLowerCase().replace(' ', '-') + '-photo.jpg')
+            figure(class='partner__img-wrapper partner__img-wrapper--' + (index + 1))
+              img(class='partner__img' src='images/partners/' + partner.name.toLowerCase().replace(' ', '-') + '-photo.jpg')
             h3.partner__title= partner.name
             p.partner__text= partner.text
 

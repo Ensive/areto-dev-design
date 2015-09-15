@@ -1,0 +1,33 @@
+@media screen and (max-width: 768px)
+
+  .container
+    padding: 0 20px
+
+  // how works
+  .how-works
+    &__title
+      margin: 43px 0 20px
+    &__step
+      padding-top: 50px
+      width: 100%
+      max-width: 300px
+      height: 240px
+      margin: 0 auto 10px !important
+      float: none
+      @include cf()
+      &-1
+        background: url('../../images/how-works/mobile/how-works-1.jpg')
+      &-2
+        background: url('../../images/how-works/mobile/how-works-2.jpg')
+      &-3
+        background: url('../../images/how-works/mobile/how-works-3.jpg')
+
+    &__step-controls
+      display: none
+
+  // footer
+  .footer
+    &__title,
+    &__menu,
+    &__logo
+      width: 25%

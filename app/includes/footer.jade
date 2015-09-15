@@ -13,12 +13,11 @@
           h5.hidden Navigation
           -var items = ['About', 'Contacts', 'Press', 'Blog']
           for item in items
-            div
-              a(class='footer__nav-link' href='#')= item
+            a(class='footer__nav-link' href='#')= item
 
       .footer__menu
         h4.footer__menu-title Partners
-        -var partners = ['Partner number #1', 'Partner number #2', 'Partner number #3', 'Partner number #4']
+        -var partners = ['Partner #1', 'Partner #2', 'Partner #3']
         for partner in partners
           a(class='footer__nav-link' href='#')= partner
 

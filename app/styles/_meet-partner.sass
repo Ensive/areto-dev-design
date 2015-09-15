@@ -18,6 +18,38 @@
   float: left
   text-decoration: none
 
+  &__img-wrapper
+    position: relative
+    display: block
+    max-width: 124px
+    max-height: 124px
+    margin-left: auto
+    margin-right: auto
+
+    &::after
+      content: ''
+      position: absolute
+      bottom: -4px
+      right: -2px
+      display: block
+      width: 40px
+      height: 40px
+      overflow: hidden
+      border: 4px solid #fff
+      border-radius: 100%
+      background-color: #fff
+      background-image: url('../images/partners/partner-icon-1.png')
+      transition: box-shadow .2s linear
+
+    &--1::after
+      background-image: url('../images/partners/partner-icon-1.png')
+    &--2::after
+      background-image: url('../images/partners/partner-icon-2.png')
+    &--3::after
+      background-image: url('../images/partners/partner-icon-3.png')
+    &--4::after
+      background-image: url('../images/partners/partner-icon-4.png')
+
   &__img
     border-radius: 100%
     transition: box-shadow .2s linear
@@ -40,4 +72,6 @@
 
   &:hover
     .partner__img
+      box-shadow: 0 0 8px rgba(0, 0, 0, .6)
+    .partner__img-wrapper::after
       box-shadow: 0 0 8px rgba(0, 0, 0, .6)
